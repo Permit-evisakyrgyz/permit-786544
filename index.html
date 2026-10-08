@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MINISTRY OF FOREIGN AFFAIRS OF THE KYRGYZ REPUBLIC</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background: white;
+    font-family: Arial, sans-serif;
+    color: #222;
+}
+
+/* Main A4 Page */
+.page {
+    width: 210mm;
+    min-height: 297mm;
+    margin: 0 auto;
+    padding: 8mm 10mm;
+    background: white;
+}
+
+/* Header */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 2px 0 6px;
+}
+
+.header img {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+}
+
+.header-text {
+    text-align: center;
+}
+
+.header-title {
+    font-size: 11px;
+    line-height: 14px;
+}
+
+.header-subtitle {
+    font-size: 7px;
+    margin-top: 2px;
+}
+
+/* Line */
+hr {
+    border: 0;
+    border-top: 1px solid #999;
+    margin: 5px 0 8px;
+}
+
+/* Photo + QR */
+.photo-qr {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 3px;
+}
+
+.photo-qr td {
+    border: none;
+    padding: 0;
+    vertical-align: top;
+}
+
+.photo-cell {
+    width: 50%;
+    text-align: left;
+}
+
+.qr-cell {
+    width: 50%;
+    text-align: right;
+}
+
+.photo {
+    width: 100px;
+    height: 130px;
+    object-fit: contain;
+}
+
+.qr {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+/* Information Table */
+.info {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.info td {
+    padding: 4px 5px;
+    vertical-align: middle;
+    border-bottom: 1px solid #ddd;
+    font-size: 10px;
+    line-height: 12px;
+}
+
+.info td:first-child {
+    width: 48%;
+    font-weight: bold;
+}
+
+.info td:last-child {
+    width: 52%;
+}
+
+/* Footer */
+.footer {
+    margin-top: 10px;
+    font-size: 9px;
+    line-height: 12px;
+    color: #666;
+    text-align: center;
+}
+
+/* Print */
+@media print {
+
+    @page {
+        size: A4;
+        margin: 0;
+    }
+
+    html, body {
+        width: 210mm;
+        height: 297mm;
+        margin: 0;
+        padding: 0;
+    }
+
+    .page {
+        width: 210mm;
+        height: 297mm;
+        min-height: 297mm;
+        margin: 0;
+        padding: 8mm 10mm;
+        box-shadow: none;
+    }
+
+    table,
+    tr,
+    td {
+        page-break-inside: avoid;
+    }
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="page">
+
+    <!-- HEADER -->
+    <div class="header">
+
+        <img src="logo.jpeg" alt="Logo">
+
+        <div class="header-text">
+
+            <div class="header-title">
+                КЫРГЫЗ РЕСПУБЛИКАСЫНЫН ТЫШКЫ ИШТЕР МИНИСТРЛИИ<br>
+                MINISTRY OF FOREIGN AFFAIRS OF THE KYRGYZ REPUBLIC
+            </div>
+
+            <div class="header-subtitle">
+                Бирдиктүү уруксат / Uniform Permit
+            </div>
+
+        </div>
+
+    </div>
+
+    <hr>
+
+    <!-- PHOTO + QR -->
+    <table class="photo-qr">
+
+        <tr>
+
+            <td class="photo-cell">
+
+                <img
+                    src="my photo.jpeg"
+                    alt="Photo"
+                    class="photo"
+                >
+
+            </td>
+
+            <td class="qr-cell">
+
+                <img
+                    src="qr.png"
+                    alt="QR Code"
+                    class="qr"
+                >
+
+            </td>
+
+        </tr>
+
+<button onclick="window.print()" class="print-btn">
+    Print
+</button>
+
+<style>
+.print-btn {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    margin: 0;
+    padding: 8px 22px;
+    font-size: 15px;
+    cursor: pointer;
+
+    border: 1px solid #888888;
+    border-radius: 4px;
+
+    background: #b0b0b0;
+    color: white;
+    z-index: 9999;
+
+    box-shadow: 0 3px 5px rgba(0,0,0,0.25);
+}
+
+.print-btn:active {
+    box-shadow: 0 1px 2px rgba(0,0,0,0.25);
+    transform: translateY(2px);
+}
+
+@media print {
+    .print-btn {
+        display: none;
+    }
+}
+</style>
+    </table>
+
+    <!-- INFORMATION -->
+    <table class="info">
+
+        <tr>
+            <td>ТОЛУК АТЫ-ЖӨНҮ/FULL NAME</td>
+            <td>MUHAMMAD SHAHZAD</td>
+        </tr>
+
+        <tr>
+            <td>Туулган күнү/DATE OF BIRTH</td>
+            <td>03-03-2006</td>
+        </tr>
+
+        <tr>
+            <td>Жарандыгы/CITIZENSHIP</td>
+            <td>PAKISTANI</td>
+        </tr>
+
+        <tr>
+            <td>Жол жүрүү документинин номери/TRAVEL DOCUMENT NUMBER</td>
+            <td>QB5166471</td>
+        </tr>
+
+        <tr>
+            <td>Жол жүрүү документинин түрү/TRAVEL DOCUMENT TYPE</td>
+            <td>ORDINARY</td>
+        </tr>
+
+        <tr>
+            <td>Берилген күнү/DATE OF ISSUE</td>
+            <td>02-10-2024</td>
+        </tr>
+
+        <tr>
+            <td>Жарактуулук мөөнөтү/DATE OF EXPIRY</td>
+            <td>01-10-2029</td>
+        </tr>
+
+        <tr>
+            <td>Бирдиктүү уруксаттын жарактуулук мөөнөтү/VALIDITY OF UNIFORM PERMIT</td>
+            <td>06-10-2026 to 05-11-2026</td>
+        </tr>
+
+        <tr>
+            <td>Визанын түрү/VISA TYPE</td>
+            <td>WORKING VISA</td>
+        </tr>
+
+        <tr>
+            <td>Кирүүлөрдүн саны/NUMBER OF ENTRIES</td>
+            <td>MULTIPLE ENTRY</td>
+        </tr>
+
+        <tr>
+            <td>Болуу мөөнөтү/PERIOD OF STAY</td>
+            <td>59 DAYS</td>
+        </tr>
+
+        <tr>
+            <td>Иш берүүчү / Чакыруучу тарап/EMPLOYER / INVITING PARTY</td>
+            <td>CREDO SEWING</td>
+        </tr>
+
+        <tr>
+            <td>RIGHT TO WORK</td>
+            <td>UNIFORM PERMIT</td>
+        </tr>
+
+    </table>
+
+    <!-- FOOTER -->
+    <div class="footer">
+        Бул барак Кыргыз Республикасынын Тышкы иштер министрлиги тарабынан
+        күбөлөндүрүлгөн, мамлекеттик орган /
+        This page is Ministry of Foreign Affairs Kyrgyz Republic, certified,
+        government authority.
+    </div>
+
+</div>
+
+</body>
+</html>
